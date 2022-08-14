@@ -1,10 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:zaros_prototype/screens/home/dashboard_page.dart';
+import 'package:zaros_prototype/screens/home/view_items_page.dart';
 
 class AppRoute {
   AppRoute._();
 
   static const String dashboard = '/dashboard';
+  static const String viewItems = '/items';
 
   static Route<dynamic> generateRoute(RouteSettings settings) {
     switch (settings.name) {
@@ -12,6 +14,11 @@ class AppRoute {
         return MaterialPageRoute(
           settings: settings,
           builder: (_) => const DashboardPage(),
+        );
+      case viewItems:
+        return MaterialPageRoute(
+          settings: settings,
+          builder: (_) => const ViewItemPage(),
         );
       default:
         return MaterialPageRoute(
