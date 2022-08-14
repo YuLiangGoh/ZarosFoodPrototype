@@ -4,6 +4,8 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:zaros_prototype/app/app_navigator.dart';
+import 'package:zaros_prototype/app/app_text_style.dart';
+import 'package:zaros_prototype/extension/text_style_ext.dart';
 import 'package:zaros_prototype/route/app_route.dart';
 import 'package:zaros_prototype/route/transition_page_route.dart';
 import 'package:zaros_prototype/const/image_path.dart';
@@ -52,9 +54,7 @@ class SplashScreenPage extends HookWidget {
                   ),
                   Text(
                     'Zaros',
-                    style: GoogleFonts.mali(
-                      fontSize: 32,
-                    ),
+                    style: AppTextStyle.mali_bold.putFontSize(32),
                   ),
                 ],
               ),
@@ -69,7 +69,8 @@ class SplashScreenPage extends HookWidget {
     await Future.delayed(
       const Duration(milliseconds: 3500),
       () {
-        AppNavigator.replaceAndRerouteToWithCustomRoute(FadeOutPageRoute(const DashboardPage()));
+        AppNavigator.replaceAndRerouteToWithCustomRoute(
+            FadeOutPageRoute(const DashboardPage()));
       },
     );
   }
