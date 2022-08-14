@@ -4,9 +4,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:zaros_prototype/app/app_navigator.dart';
-import 'package:zaros_prototype/app/app_route.dart';
+import 'package:zaros_prototype/route/app_route.dart';
+import 'package:zaros_prototype/route/transition_page_route.dart';
 import 'package:zaros_prototype/const/image_path.dart';
 import 'package:zaros_prototype/const/lottie_path.dart';
+import 'package:zaros_prototype/packages/animated_do_package.dart';
+import 'package:zaros_prototype/screens/home/dashboard_page.dart';
 
 class SplashScreenPage extends HookWidget {
   const SplashScreenPage({Key? key}) : super(key: key);
@@ -26,7 +29,7 @@ class SplashScreenPage extends HookWidget {
           children: [
             Positioned.fill(
               child: Opacity(
-                opacity: 0.1,
+                opacity: 0.05,
                 child: Image.asset(
                   imageBean,
                   repeat: ImageRepeat.repeat,
@@ -34,21 +37,27 @@ class SplashScreenPage extends HookWidget {
                 ),
               ),
             ),
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              crossAxisAlignment: CrossAxisAlignment.center,
-              children: [
-                Lottie.asset(lottieCoffee,
+            AnimatedDoHelper.fadeIn(
+              index: 1,
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment.center,
+                crossAxisAlignment: CrossAxisAlignment.center,
+                children: [
+                  Lottie.asset(
+                    lottieCoffee,
                     width: 0.5.sw,
                     frameRate: FrameRate.max,
-                    filterQuality: FilterQuality.medium),
-                Text(
-                  'Zaros',
-                  style: GoogleFonts.mali(
-                    fontSize: 32,
+                    filterQuality: FilterQuality.medium,
+                    repeat: false,
                   ),
-                ),
-              ],
+                  Text(
+                    'Zaros',
+                    style: GoogleFonts.mali(
+                      fontSize: 32,
+                    ),
+                  ),
+                ],
+              ),
             ),
           ],
         ),
@@ -58,9 +67,9 @@ class SplashScreenPage extends HookWidget {
 
   Future<void> initialStartUp() async {
     await Future.delayed(
-      const Duration(milliseconds: 3200),
+      const Duration(milliseconds: 3500),
       () {
-        AppNavigator.replaceAndRerouteTo(AppRoute.dashboard);
+        AppNavigator.replaceAndRerouteToWithCustomRoute(FadeOutPageRoute(const DashboardPage()));
       },
     );
   }

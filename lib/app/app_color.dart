@@ -5,5 +5,6 @@ class AppColors {
 
   static const Color chineseBlack = Color(0XFF0C1015);
   static const Color peru = Color(0XFFD27842);
-  static const white = Colors.white;
+  static const Color white = Colors.white;
+  static const Color black = Colors.black;
 }

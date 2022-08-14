@@ -51,6 +51,16 @@ class AppNavigator {
     }
   }
 
+  static Future<void> replaceAndRerouteToWithCustomRoute(Route<dynamic> route,
+      {dynamic arguments}) async {
+    try {
+      await Navigator.of(getContext()!)
+          .pushReplacement(route);
+    } on Exception catch (e) {
+      throw Exception('Replace and Reroute Failed : $e');
+    }
+  }
+
   /// Push the given route onto the navigator, and then remove all the 
   /// previous routes
   static Future<void> replaceAllAndRerouteTo(Widget route,
