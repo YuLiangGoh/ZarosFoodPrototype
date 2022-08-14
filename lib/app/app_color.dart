@@ -9,6 +9,7 @@ class AppColors {
   static const Color brunswickGreen = Color(0XFF1C584D);
   static const Color hookersGreen = Color(0XFF41756B);
   static const Color desaturatedCyann = Color(0XFF6A988F);
+  static const Color cultured = Color(0XFFF6F6F6);
 
   static const Color grape = Color(0XFF5D2BB3);
   static const Color turquoise = Color(0XFF4AFFF4);

@@ -29,4 +29,40 @@ class AppTextStyle {
   static final mali_bold = GoogleFonts.mali(
     fontWeight: FontWeight.w700,
   );
+
+  static final inter_thin = GoogleFonts.inter(
+    fontWeight: FontWeight.w100,
+  );
+
+  static final inter_extra_light = GoogleFonts.inter(
+    fontWeight: FontWeight.w200,
+  );
+
+  static final inter_light = GoogleFonts.inter(
+    fontWeight: FontWeight.w300,
+  );
+
+  static final inter_regular = GoogleFonts.inter(
+    fontWeight: FontWeight.w400,
+  );
+
+  static final inter_medium = GoogleFonts.inter(
+    fontWeight: FontWeight.w500,
+  );
+
+  static final inter_semi_bold = GoogleFonts.inter(
+    fontWeight: FontWeight.w600,
+  );
+
+  static final inter_bold = GoogleFonts.inter(
+    fontWeight: FontWeight.w700,
+  );
+
+  static final inter_extra_bold = GoogleFonts.inter(
+    fontWeight: FontWeight.w800,
+  );
+
+  static final inter_black = GoogleFonts.inter(
+    fontWeight: FontWeight.w900,
+  );
 }

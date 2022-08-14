@@ -16,9 +16,10 @@ class AppRoute {
           builder: (_) => const DashboardPage(),
         );
       case viewItems:
+      final args = settings.arguments as ViewItemPage;
         return MaterialPageRoute(
           settings: settings,
-          builder: (_) => const ViewItemPage(),
+          builder: (_) =>  ViewItemPage(coffee: args.coffee,),
         );
       default:
         return MaterialPageRoute(

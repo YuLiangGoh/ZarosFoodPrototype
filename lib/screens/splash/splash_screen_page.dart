@@ -1,12 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_hooks/flutter_hooks.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:google_fonts/google_fonts.dart';
 import 'package:lottie/lottie.dart';
 import 'package:zaros_prototype/app/app_navigator.dart';
 import 'package:zaros_prototype/app/app_text_style.dart';
 import 'package:zaros_prototype/extension/text_style_ext.dart';
-import 'package:zaros_prototype/route/app_route.dart';
 import 'package:zaros_prototype/route/transition_page_route.dart';
 import 'package:zaros_prototype/const/image_path.dart';
 import 'package:zaros_prototype/const/lottie_path.dart';
