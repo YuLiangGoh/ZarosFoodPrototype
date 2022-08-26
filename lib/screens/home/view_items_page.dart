@@ -171,7 +171,7 @@ class ViewItemPage extends HookWidget {
               child: Padding(
                 padding: AppPadding.widgetBetweenTopPadding,
                 child: CoffeeSizeSelectionComponent(
-                  onSelected: (CoffeeSize) {},
+                  onSelected: (coffeeSize) {},
                 ),
               ),
             ),

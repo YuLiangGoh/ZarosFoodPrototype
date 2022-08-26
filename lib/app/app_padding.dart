@@ -15,6 +15,7 @@ class AppPadding {
       MediaQuery.of(AppNavigator.getContext()!).padding.top;
 
   static final textBetweenTopPadding = EdgeInsets.only(top: 4.h);
+  
   static final textBetweenLeftPadding = EdgeInsets.only(left: 4.h);
 
   static final componentBetweenTopPadding = EdgeInsets.only(top: 24.h);
